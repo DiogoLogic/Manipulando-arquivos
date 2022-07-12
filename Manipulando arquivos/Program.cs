@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text;
 
 namespace Manipulando_arquivos
 {
@@ -11,8 +12,15 @@ namespace Manipulando_arquivos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Olá mundo");
-            Console.ReadLine();
+
+                
+                StreamWriter escritor = new StreamWriter("C:\\Estudos c#\\Test1.txt");// Criando o arquivo .TXT
+                escritor.WriteLine("Diogo");// escrevendo dentro do arquivo
+                escritor.Close();
+               
+                Console.WriteLine("Arquivo Gerado com sucesso!");
+          
+                Console.ReadLine();
         }
     }
 }
